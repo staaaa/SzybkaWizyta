@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kamil\\Source\\Repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj": {}
+    "C:\\Users\\Kewin\\Source\\Repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kamil\\Source\\Repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj": {
+    "C:\\Users\\Kewin\\Source\\Repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kamil\\Source\\Repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj",
+        "projectUniqueName": "C:\\Users\\Kewin\\Source\\Repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj",
         "projectName": "SzybkaWizyta",
-        "projectPath": "C:\\Users\\kamil\\Source\\Repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj",
-        "packagesPath": "C:\\Users\\kamil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kamil\\Source\\Repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\obj\\",
+        "projectPath": "C:\\Users\\Kewin\\Source\\Repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj",
+        "packagesPath": "C:\\Users\\Kewin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kewin\\Source\\Repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\VisualStudioShared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\kamil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Kewin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,14 +43,19 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.116, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -58,7 +67,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

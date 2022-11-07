@@ -66,5 +66,10 @@ namespace SzybkaWizyta
             Form2 f2 = new Form2();
             f2.ShowDialog();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Database databaseObj = new Database();
+        }
     }
 }
