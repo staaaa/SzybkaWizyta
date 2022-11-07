@@ -8,28 +8,20 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Stanisław\\.nuget\\packages\\": {},
-    "F:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\kamil\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Stanisław\\Desktop\\fastwizytka\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj",
+      "projectUniqueName": "C:\\Users\\kamil\\Source\\Repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj",
       "projectName": "SzybkaWizyta",
-      "projectPath": "C:\\Users\\Stanisław\\Desktop\\fastwizytka\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj",
-      "packagesPath": "C:\\Users\\Stanisław\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Stanisław\\Desktop\\fastwizytka\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\obj\\",
+      "projectPath": "C:\\Users\\kamil\\Source\\Repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj",
+      "packagesPath": "C:\\Users\\kamil\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kamil\\Source\\Repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "F:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Stanisław\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\kamil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -59,7 +51,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -71,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

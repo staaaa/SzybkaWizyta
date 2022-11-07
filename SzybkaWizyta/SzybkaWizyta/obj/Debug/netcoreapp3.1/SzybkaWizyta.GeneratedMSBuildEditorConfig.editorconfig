@@ -1,3 +1,9 @@
 is_global = true
+build_property.ApplicationManifest = 
+build_property.StartupObject = 
+build_property.ApplicationDefaultFont = 
+build_property.ApplicationHighDpiMode = 
+build_property.ApplicationUseCompatibleTextRendering = 
+build_property.ApplicationVisualStyles = 
 build_property.RootNamespace = SzybkaWizyta
-build_property.ProjectDir = C:\Users\Stanisław\Desktop\fastwizytka\SzybkaWizyta\SzybkaWizyta\SzybkaWizyta\
+build_property.ProjectDir = C:\Users\kamil\Source\Repos\SzybkaWizyta\SzybkaWizyta\SzybkaWizyta\
