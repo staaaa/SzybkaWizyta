@@ -10,6 +10,8 @@ namespace SzybkaWizyta
 {
     public partial class Form3 : Form
     {
+        int test = 0;
+        List<Label> allLabels = new List<Label>();
         public Form3()
         {
             InitializeComponent();
@@ -22,25 +24,50 @@ namespace SzybkaWizyta
         //EVENT PO WYBRANIU SPECJALIZACJI
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int iloscLekarzyZWybranaSpecjalizacją = 9;
             //TU UTWORZYSZ JAKAS LISTE Z TYMI WSZYSTKIMI LEKARZAMI.
             //list lekarze
+            List<string> lekarze = new List<string>();
+            lekarze.Add("konrad wandtke");
+            lekarze.Add("konrad debil");
+            lekarze.Add("kewin patelczyk");
+            lekarze.Add("kamil klawikowski");
+            lekarze.Add("stanislaw bozych");
 
-            //ta petla bedzie generowac kontrolki na zywo w zaleznosci od ilosci znalezionch lekarzy z dana specjalizacja.
+            //ta petla odpowiada za usuwanie starych labeli przy zmianie specjalizacji
+            if (allLabels.Count != 0)
+            {
+                for (int j = 0; j < allLabels.Count; j++)
+                {
+                    allLabels[j].Hide();
+                }
+                allLabels.Clear();
+            }
+            int iloscLekarzyZWybranaSpecjalizacją = lekarze.Count;
             int positionX = 190;
             int positionY = 150;
-            for(int i = 0; i < iloscLekarzyZWybranaSpecjalizacją; i++)
+            //ta petla bedzie generowac kontrolki na zywo w zaleznosci od ilosci znalezionch lekarzy z dana specjalizacja.
+            for (int i = 0; i < iloscLekarzyZWybranaSpecjalizacją; i++)
             {
                 Label label = new Label();
+                allLabels.Add(label);
                 label.Name = "Lekarz_" + i;
                 label.Size = new Size(200, 25);
 
-                //W TYM MIEJSCU DO TEXTU LABELA PRZYPISUJESZ IMIE I NAZWISKO DOKTORKA
-                label.Text = "JANUSZ KOWALSKI";
+                label.Text = lekarze[i];
                 label.Location = new Point(positionX,positionY);
                 Controls.Add(label);
-
-                RadioButton radio = new RadioButton();
+                label.Click += delegate 
+                {
+                    //wybierz z bazy lekarza o imieniu i nazwisku takim jak tresc labela
+                    //przypisz jego dane do WybranyLekarz
+                    //WybranyLekarz.id = cos tam i tak dalej wiadomo
+                    string[] dane = label.Text.Split(' ');
+                    WybranyLekarz.imie = dane[0];
+                    WybranyLekarz.nazwisko = dane[1];
+                    Form4 f4 = new Form4();
+                    Hide();
+                    f4.ShowDialog();
+                };
 
                 positionX += 243;
                 if(positionX > 900)

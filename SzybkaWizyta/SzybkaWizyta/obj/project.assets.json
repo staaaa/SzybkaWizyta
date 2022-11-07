@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\visual projekty\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj",
+      "projectUniqueName": "C:\\Users\\Stanisław\\Desktop\\fastwizytka\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj",
       "projectName": "SzybkaWizyta",
-      "projectPath": "F:\\visual projekty\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj",
+      "projectPath": "C:\\Users\\Stanisław\\Desktop\\fastwizytka\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj",
       "packagesPath": "C:\\Users\\Stanisław\\.nuget\\packages\\",
-      "outputPath": "F:\\visual projekty\\SzybkaWizyta\\SzybkaWizyta\\obj\\",
+      "outputPath": "C:\\Users\\Stanisław\\Desktop\\fastwizytka\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "F:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

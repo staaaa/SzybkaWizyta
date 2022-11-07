@@ -34,7 +34,9 @@ namespace SzybkaWizyta
             //userExists na true i elo
             //jesli nie to na false
 
-            bool userExists = true;
+            bool userExists = false;
+            //dodatkowo sprawdzasz czy nie ma takiego usera w bazie lekarzy, lekarz zamiast peselu se tam wpisze xyz ale psrawdzasz
+            bool isLekarz = true;
 
             if (userExists)
             {
@@ -42,9 +44,15 @@ namespace SzybkaWizyta
                 //dane tego uzytkownika z bazy przypisujesz do klasy pacjent
                 //przyklad
                 Pacjent.imie = "es";
-                this.Hide();
+                Hide();
                 Form3 f3 = new Form3();
                 f3.ShowDialog();
+            }
+            else if (isLekarz)
+            {
+                Hide();
+                Form5 f5 = new Form5();
+                f5.ShowDialog();
             }
             else
             {
