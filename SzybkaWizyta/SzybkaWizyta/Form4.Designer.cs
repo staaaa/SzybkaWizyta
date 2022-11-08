@@ -128,6 +128,7 @@ namespace SzybkaWizyta
             this.Controls.Add(this.label2);
             this.Name = "Form4";
             this.Text = "SzybkaWizyta - wybór dnia i godziny";
+            this.Load += new System.EventHandler(this.Form4_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

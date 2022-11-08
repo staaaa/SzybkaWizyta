@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,8 +20,9 @@ namespace SzybkaWizyta
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int pesel;
-            string haslo;
+            Database databaseObj = new Database();
+            int pesel=0;
+            string haslo="";
             if(inputPesel.Text != "")
             {
                 pesel = int.Parse(inputPesel.Text);
@@ -30,25 +32,50 @@ namespace SzybkaWizyta
                 haslo = inputHaslo.Text;
             }
 
-            //sprawdzasz selectem czy taki uzytkownik istnieje, jesli cos sie zwroci to ustawiasz
-            //userExists na true i elo
-            //jesli nie to na false
-
+            string zapytanieUser = $"SELECT * FROM Pacjent WHERE pesel={pesel} AND haslo = '{haslo}'";
+            string zapytanieLekarz = $"SELECT * FROM Lekarz WHERE Id={pesel} AND haslo = '{haslo}'";
+            SQLiteCommand zapytanieU = new SQLiteCommand(zapytanieUser , databaseObj.myconn);
+            SQLiteCommand zapytanieL = new SQLiteCommand(zapytanieLekarz , databaseObj.myconn);
+            databaseObj.OpenConnection();
+            SQLiteDataReader wynikU = zapytanieU.ExecuteReader();
+            SQLiteDataReader wynikL = zapytanieL.ExecuteReader();
             bool userExists = false;
-            //dodatkowo sprawdzasz czy nie ma takiego usera w bazie lekarzy, lekarz zamiast peselu se tam wpisze xyz ale psrawdzasz
-            bool isLekarz = true;
+            bool isLekarz = false;
+            if (wynikU.HasRows)
+            {
+                userExists = true;
+                
+            }
+            if (wynikL.HasRows)
+            {
+                isLekarz = true;
+            }
+
+            databaseObj.CloseConnection();
 
             if (userExists)
             {
                 labelNotExist.Text = "";
                 //dane tego uzytkownika z bazy przypisujesz do klasy pacjent
                 //przyklad
-                Pacjent.imie = "es";
+                wynikU.Read();
+                string imie = wynikU["Imie"].ToString();
+                string pesel1 = wynikU["Pesel"].ToString();
+                string nazwisko = wynikU["Nazwisko"].ToString();
+                string dataUro = wynikU["DataUro"].ToString();
+                string email = wynikU["Email"].ToString();
+                string nrTel = wynikU["NrTel"].ToString();
+                Pacjent.imie = imie;
+                Pacjent.pesel = Int64.Parse(pesel1);
+                Pacjent.nazwisko = nazwisko;
+                Pacjent.data_urodzenia = dataUro;
+                Pacjent.email = email;
+                Pacjent.nrtelefonu = nrTel;
                 Hide();
                 Form3 f3 = new Form3();
                 f3.ShowDialog();
             }
-            else if (isLekarz)
+            if (isLekarz)
             {
                 Hide();
                 Form5 f5 = new Form5();
@@ -58,6 +85,8 @@ namespace SzybkaWizyta
             {
                 labelNotExist.Text = "Konto o podanych danych nie istnieje.";
             }
+            wynikU.Dispose();
+            wynikL.Dispose();
         }
 
         private void labelRejestracja_Click(object sender, EventArgs e)
@@ -69,7 +98,7 @@ namespace SzybkaWizyta
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Database databaseObj = new Database();
+            
         }
     }
 }

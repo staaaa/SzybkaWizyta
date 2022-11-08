@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kewin\\Source\\Repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj": {}
+    "C:\\Users\\Kewin\\source\\repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kewin\\Source\\Repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj": {
+    "C:\\Users\\Kewin\\source\\repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kewin\\Source\\Repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj",
+        "projectUniqueName": "C:\\Users\\Kewin\\source\\repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj",
         "projectName": "SzybkaWizyta",
-        "projectPath": "C:\\Users\\Kewin\\Source\\Repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj",
+        "projectPath": "C:\\Users\\Kewin\\source\\repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj",
         "packagesPath": "C:\\Users\\Kewin\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Kewin\\Source\\Repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\obj\\",
         "projectStyle": "PackageReference",

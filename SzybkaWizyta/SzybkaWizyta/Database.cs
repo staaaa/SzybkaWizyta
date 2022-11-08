@@ -11,7 +11,7 @@ namespace SzybkaWizyta
         public SQLiteConnection myconn;
         public Database()
         {
-            myconn = new SQLiteConnection("Data Source=database.sqlite3");
+            myconn = new SQLiteConnection("Data Source=SzybkaWizyta.sqlite3");
 
             if (!File.Exists("./SzybkaWizyta.sqlite3"))
             {

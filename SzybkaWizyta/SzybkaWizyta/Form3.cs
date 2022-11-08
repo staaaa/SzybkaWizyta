@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -15,10 +16,6 @@ namespace SzybkaWizyta
         public Form3()
         {
             InitializeComponent();
-            //W TYM MIEJSCU MUSISZ ZAŁADOWAĆ LISTE WSZYSTKICH SPECJALIZACJI LEKARSKICH W BAZIE DO COMBOBOXA
-            //SELECT DISTINCT SPECJALIZACJA
-            //I TA CALA LISTE WPIERDALASZ W TAKI SPOSÓB
-            //comboBox1.Items.Add();
         }
 
         //EVENT PO WYBRANIU SPECJALIZACJI
@@ -76,6 +73,23 @@ namespace SzybkaWizyta
                     positionY += 50;
                 }
             }
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            Database databaseObj = new Database();
+            databaseObj.OpenConnection();
+            string zapytanieSpec = "SELECT DISTINCT(Specjalizacja) AS spec FROM Lekarz";
+            SQLiteCommand zapytanieA = new SQLiteCommand(zapytanieSpec, databaseObj.myconn);
+            SQLiteDataReader wynikA = zapytanieA.ExecuteReader();
+            if (wynikA.HasRows)
+            {
+                wynikA.Read();
+                comboBox1.Items.Add(wynikA["spec"]);
+            }
+            wynikA.Dispose();
+
+            databaseObj.CloseConnection();
         }
     }
 }

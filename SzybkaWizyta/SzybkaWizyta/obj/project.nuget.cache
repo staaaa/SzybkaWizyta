@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uX2SBvVSgwrv2SyjCT+AfC1yiU78nBfZDDvmsg9Q0ZcOBSeulX/BhXikqC8S0FN7Byjb1N+eOqEcHzegAHT0qg==",
+  "dgSpecHash": "Q6im+9AQg+IQXiqiku+l8CKu//8p+WXPlqjifmoih/zNBfJO2DQPGa8evXxjJsz5eNLmzFzyFivf5L06PE4Z6Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kewin\\Source\\Repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj",
+  "projectFilePath": "C:\\Users\\Kewin\\source\\repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kewin\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Kewin\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

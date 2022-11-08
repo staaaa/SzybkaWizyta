@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -21,11 +22,27 @@ namespace SzybkaWizyta
             //TU UTWORZYSZ JAKAS LISTE ZE WSZYSTKIMI WIZYTAMI.
             //lista wizyt
             List<string> wizyty = new List<string>();
-            wizyty.Add("10:00 - konrad wandtke");
-            wizyty.Add("11:00 - kewin patelczyk");
-            wizyty.Add("11:30 - laura szpicruta");
-            wizyty.Add("12:00 - maciej boryna");
+            //wizyty.Add("10:00 - konrad wandtke");
+            //wizyty.Add("11:00 - kewin patelczyk");
+            //wizyty.Add("11:30 - laura szpicruta");
+            //wizyty.Add("12:00 - maciej boryna"); - Maciej Boryna i szpicruta w łeb
+            Database database = new Database();
+            string zapytanieWizyty = "SELECT GodzinaWizyty, imie, nazwisko FROM Wizyty INNER JOIN Pacjent ON Pacjent.Id = Wizyty.IdWizyty";
+            SQLiteCommand zapytanieA = new SQLiteCommand(zapytanieWizyty, database.myconn);
+            database.OpenConnection();
+            SQLiteDataReader wynikW = zapytanieA.ExecuteReader();
+            if(wynikW.HasRows)
+            {
+                wynikW.Read();
+                string godzina = wynikW["GodzinaWizyty"].ToString();
+                string imie = wynikW["imie"].ToString();
+                string nazwisko = wynikW["nazwisko"].ToString();
+                string concat = godzina + " - " + imie + " " + nazwisko;
+                wizyty.Add(concat);
+            }wynikW.Close();
 
+
+            database.CloseConnection();
 
             //ta petla odpowiada za usuwanie starych labeli przy zmianie specjalizacji
             if (allLabels.Count != 0)
@@ -58,6 +75,11 @@ namespace SzybkaWizyta
                     positionX += 100;
                 }
             }
+        }
+
+        private void Form5_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

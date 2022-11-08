@@ -73,24 +73,24 @@ namespace SzybkaWizyta
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nexa-Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(20, 20);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.MaximumSize = new System.Drawing.Size(700, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(678, 27);
+            this.label2.Size = new System.Drawing.Size(663, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "Wybierz specjalizację lekarza, do którego chcesz się zarejestrować:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nexa-Bold", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(240, 700);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.MaximumSize = new System.Drawing.Size(700, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(684, 26);
+            this.label1.Size = new System.Drawing.Size(622, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "Aby wybrać jakiegoś lekarza, należy kliknąć na jego imie lub nazwisko.";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -123,7 +123,7 @@ namespace SzybkaWizyta
             this.btnCos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
             this.btnCos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCos.Font = new System.Drawing.Font("Nexa-Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnCos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCos.Location = new System.Drawing.Point(0, 0);
             this.btnCos.Name = "btnCos";
             this.btnCos.Size = new System.Drawing.Size(200, 50);
@@ -135,7 +135,7 @@ namespace SzybkaWizyta
             // 
             this.panel6.Controls.Add(this.btnDoctors);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Font = new System.Drawing.Font("Nexa-Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.panel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panel6.Location = new System.Drawing.Point(0, 300);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(200, 50);
@@ -168,7 +168,7 @@ namespace SzybkaWizyta
             this.btnHomepage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHomepage.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHomepage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHomepage.Font = new System.Drawing.Font("Nexa-Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnHomepage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnHomepage.Location = new System.Drawing.Point(0, 0);
             this.btnHomepage.Name = "btnHomepage";
             this.btnHomepage.Size = new System.Drawing.Size(200, 50);
@@ -206,10 +206,10 @@ namespace SzybkaWizyta
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Nexa-Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(40, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(306, 24);
+            this.label3.Size = new System.Drawing.Size(287, 24);
             this.label3.TabIndex = 0;
             this.label3.Text = "LEKARZE - WYBIERZ LEKARZA";
             // 
@@ -236,6 +236,7 @@ namespace SzybkaWizyta
             this.MaximizeBox = false;
             this.Name = "Form3";
             this.Text = "SzybkaWizyta - rejestracja na wizytę";
+            this.Load += new System.EventHandler(this.Form3_Load);
             this.panel1.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);

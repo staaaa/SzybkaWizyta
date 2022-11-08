@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -17,9 +18,10 @@ namespace SzybkaWizyta
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Database database = new Database();
             string imie = null;
             string nazwisko = null;
-            int pesel = 0;
+            long pesel = 0;
             string nrtele = null;
             string email = null;
             string haslo = null;
@@ -34,7 +36,7 @@ namespace SzybkaWizyta
             }
             if (inputPesel.Text != "")
             {
-                pesel = int.Parse(inputPesel.Text);
+                pesel = Int64.Parse(inputPesel.Text);
             }
             if (inputNrtele.Text != "")
             {
@@ -49,17 +51,33 @@ namespace SzybkaWizyta
                 haslo = inputHaslo.Text;
             }
             DateTime dataUrodzenia = inputDataUro.Value;
-
-            //request czy user o podanym peselu juz przypadkiem nie istnieje, jesli nie rejestrujesz
-
-            bool userCreated = false;
+            database.OpenConnection();
+            string zapytanie = "INSERT INTO Pacjent (`Pesel`, `Imie`,`Nazwisko`,`Haslo`,`DataUro`,`Email`,`NrTel`) VALUES (@Pesel, @Imie, @Nazwisko, @Haslo, @DataUro,@Email,@NrTel)";
+            SQLiteCommand cmd = new SQLiteCommand(zapytanie, database.myconn);
+            cmd.Parameters.AddWithValue("@Pesel", pesel);
+            cmd.Parameters.AddWithValue("@Imie", imie);
+            cmd.Parameters.AddWithValue("@Nazwisko", nazwisko);
+            cmd.Parameters.AddWithValue("@Haslo", haslo);
+            cmd.Parameters.AddWithValue("@DataUro", dataUrodzenia.ToString());
+            cmd.Parameters.AddWithValue("@Email", email);
+            cmd.Parameters.AddWithValue("@NrTel", nrtele);
+            try
+            {
+                var result = cmd.ExecuteNonQuery();
+                MessageBox.Show("Uzytkownik dodany pomyslnie");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            bool userCreated = true;
             if (userCreated)
             {
                 //Przypisanie danych do pacjenta w klasie
                 Pacjent.imie = imie;
                 Pacjent.nazwisko = nazwisko;
                 Pacjent.pesel = pesel;
-                Pacjent.data_urodzenia = dataUrodzenia;
+                Pacjent.data_urodzenia = dataUrodzenia.ToString();
                 Pacjent.email = email;
                 Pacjent.nrtelefonu = nrtele;
 
@@ -67,10 +85,7 @@ namespace SzybkaWizyta
                 Form3 f3 = new Form3();
                 f3.ShowDialog();
             }
-            else
-            {
-                labelNotExist.Text = "Konto o podanych danych już istnieje w bazie danych.";
-            }
+            database.CloseConnection();
         }
 
         private void labelLogin_Click(object sender, EventArgs e)
