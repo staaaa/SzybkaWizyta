@@ -209,9 +209,9 @@ namespace SzybkaWizyta
             this.label3.Font = new System.Drawing.Font("Nexa-Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(40, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(306, 24);
+            this.label3.Size = new System.Drawing.Size(246, 24);
             this.label3.TabIndex = 0;
-            this.label3.Text = "LEKARZE - WYBIERZ LEKARZA";
+            this.label3.Text = "Lekarze - Wybierz lekarza";
             // 
             // panel8
             // 
