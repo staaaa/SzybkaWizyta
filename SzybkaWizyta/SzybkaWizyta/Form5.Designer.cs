@@ -38,18 +38,18 @@ namespace SzybkaWizyta
             // 
             // dataWizyty
             // 
-            this.dataWizyty.CalendarFont = new System.Drawing.Font("Nexa-Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dataWizyty.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dataWizyty.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.dataWizyty.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
             this.dataWizyty.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(224)))), ((int)(((byte)(217)))));
             this.dataWizyty.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.dataWizyty.Font = new System.Drawing.Font("Nexa-Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dataWizyty.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dataWizyty.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dataWizyty.Location = new System.Drawing.Point(40, 180);
             this.dataWizyty.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
             this.dataWizyty.MinDate = new System.DateTime(2022, 1, 1, 0, 0, 0, 0);
             this.dataWizyty.Name = "dataWizyty";
-            this.dataWizyty.Size = new System.Drawing.Size(222, 34);
+            this.dataWizyty.Size = new System.Drawing.Size(222, 31);
             this.dataWizyty.TabIndex = 10;
             this.dataWizyty.ValueChanged += new System.EventHandler(this.dataWizyty_ValueChanged);
             // 
@@ -66,20 +66,20 @@ namespace SzybkaWizyta
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Nexa-Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(40, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(522, 27);
+            this.label3.Size = new System.Drawing.Size(504, 25);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Witaj w aplikacji SzybkaWizyta - wersja dla lekarzy";
+            this.label3.Text = "Witaj w aplikacji SzybkaWizyta - wersja dla lekarzy ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nexa-Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(40, 120);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(624, 27);
+            this.label2.Size = new System.Drawing.Size(593, 25);
             this.label2.TabIndex = 13;
             this.label2.Text = "Wybierz dzień, dla którego ma zostać wyświetlony terminarz:";
             // 
@@ -94,12 +94,9 @@ namespace SzybkaWizyta
             this.Controls.Add(this.dataWizyty);
             this.Name = "Form5";
             this.Text = "Form5";
-<<<<<<< HEAD
             this.Load += new System.EventHandler(this.Form5_Load);
-=======
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
->>>>>>> 177a8f3940f3719e10f7708f33ca41f423db00af
             this.ResumeLayout(false);
             this.PerformLayout();
 

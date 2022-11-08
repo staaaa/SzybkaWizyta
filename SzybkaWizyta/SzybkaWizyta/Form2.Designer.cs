@@ -59,9 +59,9 @@ namespace SzybkaWizyta
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(40, 200);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 25);
+            this.label3.Size = new System.Drawing.Size(63, 25);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Imię:";
+            this.label3.Text = "Imię: ";
             // 
             // inputImie
             // 

@@ -46,7 +46,7 @@ namespace SzybkaWizyta
             // inputPesel
             // 
             this.inputPesel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(224)))), ((int)(((byte)(217)))));
-            this.inputPesel.Font = new System.Drawing.Font("Nexa-Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.inputPesel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.inputPesel.Location = new System.Drawing.Point(140, 240);
             this.inputPesel.Multiline = true;
             this.inputPesel.Name = "inputPesel";
@@ -56,7 +56,7 @@ namespace SzybkaWizyta
             // inputHaslo
             // 
             this.inputHaslo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(224)))), ((int)(((byte)(217)))));
-            this.inputHaslo.Font = new System.Drawing.Font("Nexa-Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.inputHaslo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.inputHaslo.Location = new System.Drawing.Point(140, 340);
             this.inputHaslo.Multiline = true;
             this.inputHaslo.Name = "inputHaslo";
@@ -67,7 +67,7 @@ namespace SzybkaWizyta
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(215)))), ((int)(((byte)(195)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Nexa-Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(140, 420);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(180, 40);
@@ -79,37 +79,37 @@ namespace SzybkaWizyta
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nexa-Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(40, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(354, 27);
+            this.label1.Size = new System.Drawing.Size(336, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "Witamy w aplikacji SzybkaWizyta!";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nexa-Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(40, 120);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(370, 31);
+            this.label2.Size = new System.Drawing.Size(344, 29);
             this.label2.TabIndex = 4;
             this.label2.Text = "Zaloguj się, aby kontynuować...";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Nexa-Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(140, 200);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 24);
+            this.label3.Size = new System.Drawing.Size(67, 24);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Pesel:";
+            this.label3.Text = "Pesel: ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Nexa-Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(140, 300);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 24);
@@ -119,10 +119,10 @@ namespace SzybkaWizyta
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Nexa-Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.Location = new System.Drawing.Point(250, 600);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(177, 27);
+            this.label7.Size = new System.Drawing.Size(172, 25);
             this.label7.TabIndex = 7;
             this.label7.Text = "Nie masz konta?";
             // 
@@ -131,12 +131,12 @@ namespace SzybkaWizyta
             this.labelRejestracja.AutoSize = true;
             this.labelRejestracja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(215)))), ((int)(((byte)(195)))));
             this.labelRejestracja.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labelRejestracja.Font = new System.Drawing.Font("Nexa-Bold", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.labelRejestracja.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
             this.labelRejestracja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.labelRejestracja.Location = new System.Drawing.Point(430, 596);
             this.labelRejestracja.Name = "labelRejestracja";
             this.labelRejestracja.Padding = new System.Windows.Forms.Padding(3);
-            this.labelRejestracja.Size = new System.Drawing.Size(166, 33);
+            this.labelRejestracja.Size = new System.Drawing.Size(160, 31);
             this.labelRejestracja.TabIndex = 8;
             this.labelRejestracja.Text = "Zarejestruj się!";
             this.labelRejestracja.Click += new System.EventHandler(this.labelRejestracja_Click);

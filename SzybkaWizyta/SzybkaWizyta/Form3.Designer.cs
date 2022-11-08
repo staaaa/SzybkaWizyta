@@ -209,13 +209,9 @@ namespace SzybkaWizyta
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(40, 30);
             this.label3.Name = "label3";
-<<<<<<< HEAD
-            this.label3.Size = new System.Drawing.Size(287, 24);
-=======
-            this.label3.Size = new System.Drawing.Size(246, 24);
->>>>>>> 177a8f3940f3719e10f7708f33ca41f423db00af
+            this.label3.Size = new System.Drawing.Size(229, 24);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Lekarze - Wybierz lekarza";
+            this.label3.Text = "Lekarze - Wybierz lekarza ";
             // 
             // panel8
             // 
