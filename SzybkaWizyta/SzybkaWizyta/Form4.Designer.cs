@@ -36,89 +36,119 @@ namespace SzybkaWizyta
             this.labelGodzina = new System.Windows.Forms.Label();
             this.godzinaPicker = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(218, 33);
+            this.label2.Font = new System.Drawing.Font("Nexa-Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(40, 120);
             this.label2.MaximumSize = new System.Drawing.Size(700, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(222, 27);
+            this.label2.Size = new System.Drawing.Size(160, 24);
             this.label2.TabIndex = 6;
             this.label2.Text = "Wybrany lekarz:";
             // 
             // labelLekarz
             // 
             this.labelLekarz.AutoSize = true;
-            this.labelLekarz.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelLekarz.Location = new System.Drawing.Point(446, 33);
+            this.labelLekarz.Font = new System.Drawing.Font("Nexa-Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelLekarz.Location = new System.Drawing.Point(220, 120);
             this.labelLekarz.MaximumSize = new System.Drawing.Size(700, 0);
             this.labelLekarz.Name = "labelLekarz";
-            this.labelLekarz.Size = new System.Drawing.Size(222, 27);
+            this.labelLekarz.Size = new System.Drawing.Size(146, 24);
             this.labelLekarz.TabIndex = 7;
             this.labelLekarz.Text = "imie i nazwisko";
             // 
             // dataWizyty
             // 
-            this.dataWizyty.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dataWizyty.CalendarFont = new System.Drawing.Font("Nexa-Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dataWizyty.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.dataWizyty.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(224)))), ((int)(((byte)(217)))));
+            this.dataWizyty.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(224)))), ((int)(((byte)(217)))));
+            this.dataWizyty.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.dataWizyty.Font = new System.Drawing.Font("Nexa-Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dataWizyty.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dataWizyty.Location = new System.Drawing.Point(446, 88);
+            this.dataWizyty.Location = new System.Drawing.Point(320, 180);
             this.dataWizyty.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
             this.dataWizyty.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.dataWizyty.Name = "dataWizyty";
-            this.dataWizyty.Size = new System.Drawing.Size(222, 38);
+            this.dataWizyty.Size = new System.Drawing.Size(222, 32);
             this.dataWizyty.TabIndex = 8;
             this.dataWizyty.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(64, 97);
+            this.label1.Font = new System.Drawing.Font("Nexa-Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(40, 180);
             this.label1.MaximumSize = new System.Drawing.Size(700, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(376, 27);
+            this.label1.Size = new System.Drawing.Size(263, 24);
             this.label1.TabIndex = 9;
             this.label1.Text = "Proszę wybrać datę wizyty:";
             // 
             // labelGodzina
             // 
             this.labelGodzina.AutoSize = true;
-            this.labelGodzina.Font = new System.Drawing.Font("Courier New", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelGodzina.Location = new System.Drawing.Point(22, 167);
+            this.labelGodzina.Font = new System.Drawing.Font("Nexa-Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelGodzina.Location = new System.Drawing.Point(40, 240);
             this.labelGodzina.MaximumSize = new System.Drawing.Size(700, 0);
             this.labelGodzina.Name = "labelGodzina";
-            this.labelGodzina.Size = new System.Drawing.Size(418, 27);
+            this.labelGodzina.Size = new System.Drawing.Size(292, 24);
             this.labelGodzina.TabIndex = 10;
             this.labelGodzina.Text = "Proszę wybrać godzinę wizyty:";
             // 
             // godzinaPicker
             // 
             this.godzinaPicker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.godzinaPicker.Font = new System.Drawing.Font("Courier New", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.godzinaPicker.Font = new System.Drawing.Font("Nexa-Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.godzinaPicker.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.godzinaPicker.FormattingEnabled = true;
-            this.godzinaPicker.Location = new System.Drawing.Point(446, 161);
+            this.godzinaPicker.Location = new System.Drawing.Point(350, 240);
             this.godzinaPicker.Name = "godzinaPicker";
-            this.godzinaPicker.Size = new System.Drawing.Size(222, 38);
+            this.godzinaPicker.Size = new System.Drawing.Size(222, 32);
             this.godzinaPicker.TabIndex = 11;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(253, 256);
+            this.button1.Font = new System.Drawing.Font("Nexa-Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(40, 320);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(322, 262);
+            this.button1.Size = new System.Drawing.Size(350, 280);
             this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(215)))), ((int)(((byte)(195)))));
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(884, 80);
+            this.panel2.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Nexa-Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(40, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(244, 24);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Lekarze - Wybrany lekarz";
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.ClientSize = new System.Drawing.Size(884, 661);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.godzinaPicker);
             this.Controls.Add(this.labelGodzina);
@@ -128,7 +158,12 @@ namespace SzybkaWizyta
             this.Controls.Add(this.label2);
             this.Name = "Form4";
             this.Text = "SzybkaWizyta - wybór dnia i godziny";
+<<<<<<< HEAD
             this.Load += new System.EventHandler(this.Form4_Load);
+=======
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+>>>>>>> 177a8f3940f3719e10f7708f33ca41f423db00af
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,5 +178,7 @@ namespace SzybkaWizyta
         private System.Windows.Forms.Label labelGodzina;
         private System.Windows.Forms.ComboBox godzinaPicker;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Q6im+9AQg+IQXiqiku+l8CKu//8p+WXPlqjifmoih/zNBfJO2DQPGa8evXxjJsz5eNLmzFzyFivf5L06PE4Z6Q==",
+  "dgSpecHash": "u4aFqWPQcJtS9DnGgzykDv+0z4LfZ2B2nwy9uWtl7UOdbvu1itBKJduwvdWDudK+oxDqAmdNoIUGKc5GGI9JlA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kewin\\source\\repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta.csproj",
   "expectedPackageFiles": [
@@ -28,5 +28,12 @@
     "C:\\Users\\Kewin\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\Kewin\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Kewin\\source\\repos\\SzybkaWizyta\\SzybkaWizyta\\SzybkaWizyta\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
