@@ -59,11 +59,6 @@ namespace SzybkaWizyta
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Courier New", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "ortopeda",
-            "frajer",
-            "konrad",
-            "debil"});
             this.comboBox1.Location = new System.Drawing.Point(240, 200);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(421, 31);

@@ -31,7 +31,7 @@ namespace SzybkaWizyta
             SQLiteCommand zapytanieA = new SQLiteCommand(zapytanieWizyty, database.myconn);
             database.OpenConnection();
             SQLiteDataReader wynikW = zapytanieA.ExecuteReader();
-            if(wynikW.HasRows)
+            while(wynikW.Read())
             {
                 wynikW.Read();
                 string godzina = wynikW["GodzinaWizyty"].ToString();

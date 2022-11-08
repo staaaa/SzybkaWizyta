@@ -11,7 +11,6 @@ namespace SzybkaWizyta
 {
     public partial class Form3 : Form
     {
-        int test = 0;
         List<Label> allLabels = new List<Label>();
         public Form3()
         {
@@ -24,11 +23,22 @@ namespace SzybkaWizyta
             //TU UTWORZYSZ JAKAS LISTE Z TYMI WSZYSTKIMI LEKARZAMI.
             //list lekarze
             List<string> lekarze = new List<string>();
-            lekarze.Add("konrad wandtke");
-            lekarze.Add("konrad debil");
-            lekarze.Add("kewin patelczyk");
-            lekarze.Add("kamil klawikowski");
-            lekarze.Add("stanislaw bozych");
+            Database database = new Database();
+            string zapytanie = "SELECT imie,nazwisko FROM Lekarz";
+            SQLiteCommand zapytanieA = new SQLiteCommand(zapytanie, database.myconn);
+            database.OpenConnection();
+            SQLiteDataReader wynikA = zapytanieA.ExecuteReader();
+            if (wynikA.HasRows)
+            {
+                wynikA.Read();
+                string wybraneImie = wynikA["imie"].ToString();
+                string wybraneNazwisko = wynikA["nazwisko"].ToString();
+                string concat = wybraneImie + " " + wybraneNazwisko;
+                lekarze.Add(concat);
+            }
+            wynikA.Close();
+            database.CloseConnection();
+
 
             //ta petla odpowiada za usuwanie starych labeli przy zmianie specjalizacji
             if (allLabels.Count != 0)
@@ -78,16 +88,31 @@ namespace SzybkaWizyta
         private void Form3_Load(object sender, EventArgs e)
         {
             Database databaseObj = new Database();
+
+
+            string zapytanieDostepny = "SELECT DISTINCT Specjalizacja AS Dostepnosc FROM Lekarz";
+            SQLiteCommand zapytanieD = new SQLiteCommand(zapytanieDostepny, databaseObj.myconn);
             databaseObj.OpenConnection();
-            string zapytanieSpec = "SELECT DISTINCT(Specjalizacja) AS spec FROM Lekarz";
-            SQLiteCommand zapytanieA = new SQLiteCommand(zapytanieSpec, databaseObj.myconn);
-            SQLiteDataReader wynikA = zapytanieA.ExecuteReader();
-            if (wynikA.HasRows)
-            {
-                wynikA.Read();
-                comboBox1.Items.Add(wynikA["spec"]);
+
+            SQLiteDataReader wynikD = zapytanieD.ExecuteReader();
+            while (wynikD.Read())
+            {   
+                string test = wynikD["Dostepnosc"].ToString();
+                comboBox1.Items.Add(test);
             }
-            wynikA.Dispose();
+            wynikD.Close();
+
+            //databaseObj.OpenConnection();
+            //string zapytanieSpec = "SELECT * FROM Lekarz";
+            //SQLiteCommand zapytanieA = new SQLiteCommand(zapytanieSpec, databaseObj.myconn);
+            //SQLiteDataReader wynikA = zapytanieA.ExecuteReader();
+            //if(wynikA.HasRows)
+            //{
+            //    wynikA.Read();
+            //    string test = wynikA["Specjalizacja"].ToString();
+            //    comboBox1.Items.Add(test);
+            //}
+            //wynikA.Close();
 
             databaseObj.CloseConnection();
         }
