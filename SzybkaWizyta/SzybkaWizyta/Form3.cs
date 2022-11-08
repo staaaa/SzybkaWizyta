@@ -49,6 +49,7 @@ namespace SzybkaWizyta
                             string concat = wybraneImie + " " + wybraneNazwisko;
                             lekarze.Add(concat);
                         }
+                        wynikD.Close();
                     }
                 }
             }

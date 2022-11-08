@@ -91,7 +91,7 @@ namespace SzybkaWizyta
                 //"INSERT INTO Pacjent (`Pesel`, `Imie`,`Nazwisko`,`Haslo`,`DataUro`,`Email`,`NrTel`) VALUES (@Pesel, @Imie, @Nazwisko, @Haslo, @DataUro,@Email,@NrTel)";
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, c))
                 {
-                    cmd.Parameters.AddWithValue("p", 1234576);
+                    cmd.Parameters.AddWithValue("p", 12334576);
                     cmd.Parameters.AddWithValue("i", "kewin");
                     cmd.Parameters.AddWithValue("n", "pat");
                     cmd.Parameters.AddWithValue("h", "xyz");

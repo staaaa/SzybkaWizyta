@@ -20,7 +20,7 @@ namespace SzybkaWizyta
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Database databaseObj = new Database();
+            
             int pesel=0;
             string haslo="";
             if(inputPesel.Text != "")
@@ -31,7 +31,7 @@ namespace SzybkaWizyta
             {
                 haslo = inputHaslo.Text;
             }
-
+            Database databaseObj = new Database();
             string zapytanieUser = $"SELECT * FROM Pacjent WHERE pesel={pesel} AND haslo = '{haslo}'";
             string zapytanieLekarz = $"SELECT * FROM Lekarz WHERE Id={pesel} AND haslo = '{haslo}'";
             SQLiteCommand zapytanieU = new SQLiteCommand(zapytanieUser , databaseObj.myconn);
