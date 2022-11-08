@@ -58,20 +58,25 @@ namespace SzybkaWizyta
                 + WybranyLekarz.nazwisko +
                 "\rdnia " + data +
                 "\ro godzinie: " + godzina, "Udało się!");
-            Database database = new Database();
-            database.OpenConnection();
-            string zapytanie = "INSERT INTO Pacjent (`pesel`) VALUES (@pesel)";
-            SQLiteCommand cmd = new SQLiteCommand(zapytanie, database.myconn);
-            cmd.Parameters.AddWithValue("@pesel", 101);
-            try
-            {
-                var result = cmd.ExecuteNonQuery();
-                MessageBox.Show("Uzytkownik dodany pomyslnie");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
+            //Database databaseObj = new Database();
+            //using (SQLiteConnection c = new SQLiteConnection(databaseObj.myconn))
+            //{
+            //    c.Open();
+            //    string sql = "INSERT INTO Pacjent (`Pesel`, `Imie`,`Nazwisko`,`Haslo`,`DataUro`,`Email`,`NrTel`) VALUES (@Pesel, @Imie, @Nazwisko, @Haslo, @DataUro,@Email,@NrTel)";
+            //    using (SQLiteCommand cmd = new SQLiteCommand(sql, c))
+            //    {
+            //        cmd.Parameters.AddWithValue("@Pesel", 1234);
+            //        cmd.Parameters.AddWithValue("@Imie", "kewin");
+            //        cmd.Parameters.AddWithValue("@Nazwisko", "pat");
+            //        cmd.Parameters.AddWithValue("@Haslo", "xyz");
+            //        cmd.Parameters.AddWithValue("@DataUro", "111");
+            //        cmd.Parameters.AddWithValue("@Email", "cos@wp.pl");
+            //        cmd.Parameters.AddWithValue("@NrTel", 1234);
+            //        cmd.ExecuteNonQuery();
+            //    }
+            //}
+
             //string query = "INSERT INTO Wizyty (`IdWizyty`, `IdPacjenta`,`IdLekarza`,`GodzinaWizyty`,`DataWizyty`) VALUES (@Id, @IdPacjenta, @IdLekarza, @GodzinaWizyty, @DataWizyty)";
             //SQLiteCommand mycommand = new SQLiteCommand(query, database.myconn);
 
@@ -84,7 +89,7 @@ namespace SzybkaWizyta
             //mycommand.Parameters.AddWithValue("@GodzinaWizyty", godzinaPicker.SelectedItem.ToString());
             //mycommand.Parameters.AddWithValue("@DataWizyty", data1);
             //var result = mycommand.ExecuteNonQuery();
-            database.CloseConnection();
+
 
             MessageBox.Show("Pomyslnie dodano wizytę! ");
             Form3 f3 = new Form3();
@@ -94,8 +99,30 @@ namespace SzybkaWizyta
 
         private void Form4_Load(object sender, EventArgs e)
         {
-
+            //Database database = new Database();
+            //database.OpenConnection();
+            //string zapytanie = "INSERT INTO Pacjent (`Pesel`, `Imie`,`Nazwisko`,`Haslo`,`DataUro`,`Email`,`NrTel`) VALUES (@Pesel, @Imie, @Nazwisko, @Haslo, @DataUro,@Email,@NrTel)";
+            //SQLiteCommand cmd = new SQLiteCommand(zapytanie, database.myconn);
+            //cmd.Parameters.AddWithValue("@Pesel", 123);
+            //cmd.Parameters.AddWithValue("@Imie", "kewin");
+            //cmd.Parameters.AddWithValue("@Nazwisko", "pat");
+            //cmd.Parameters.AddWithValue("@Haslo", "xyz");
+            //cmd.Parameters.AddWithValue("@DataUro", "111");
+            //cmd.Parameters.AddWithValue("@Email", "cos@wp.pl");
+            //cmd.Parameters.AddWithValue("@NrTel", 1234);
+            //try
+            //{
+            //    var result = cmd.ExecuteNonQuery();
+            //    MessageBox.Show("Uzytkownik dodany pomyslnie");
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+            //database.CloseConnection();
         }
+
+
 
         private void godzinaPicker_SelectedIndexChanged(object sender, EventArgs e)
         {

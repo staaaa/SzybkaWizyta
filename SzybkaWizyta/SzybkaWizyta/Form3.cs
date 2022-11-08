@@ -23,22 +23,35 @@ namespace SzybkaWizyta
             //TU UTWORZYSZ JAKAS LISTE Z TYMI WSZYSTKIMI LEKARZAMI.
             //list lekarze
             List<string> lekarze = new List<string>();
-            Database database = new Database();
-            string zapytanie = "SELECT imie,nazwisko FROM Lekarz";
-            SQLiteCommand zapytanieA = new SQLiteCommand(zapytanie, database.myconn);
-            database.OpenConnection();
-            SQLiteDataReader wynikA = zapytanieA.ExecuteReader();
-            if (wynikA.HasRows)
-            {
-                wynikA.Read();
-                string wybraneImie = wynikA["imie"].ToString();
-                string wybraneNazwisko = wynikA["nazwisko"].ToString();
-                string concat = wybraneImie + " " + wybraneNazwisko;
-                lekarze.Add(concat);
-            }
-            wynikA.Close();
-            database.CloseConnection();
 
+            //if (wynikA.HasRows)
+            //{
+            //    wynikA.Read();
+            //    string wybraneImie = wynikA["imie"].ToString();
+            //    string wybraneNazwisko = wynikA["nazwisko"].ToString();
+            //    string concat = wybraneImie + " " + wybraneNazwisko;
+            //    lekarze.Add(concat);
+            //}
+            Database databaseObj = new Database();
+
+            using (SQLiteConnection c = new SQLiteConnection(databaseObj.myconn))
+            {
+                c.Open();
+                string sql = "SELECT imie,nazwisko FROM Lekarz";
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, c))
+                {
+                    using (SQLiteDataReader wynikD = cmd.ExecuteReader())
+                    {
+                        while (wynikD.Read())
+                        {
+                            string wybraneImie = wynikD["imie"].ToString();
+                            string wybraneNazwisko = wynikD["nazwisko"].ToString();
+                            string concat = wybraneImie + " " + wybraneNazwisko;
+                            lekarze.Add(concat);
+                        }
+                    }
+                }
+            }
 
             //ta petla odpowiada za usuwanie starych labeli przy zmianie specjalizacji
             if (allLabels.Count != 0)
@@ -61,9 +74,9 @@ namespace SzybkaWizyta
                 label.Size = new Size(200, 25);
 
                 label.Text = lekarze[i];
-                label.Location = new Point(positionX,positionY);
+                label.Location = new Point(positionX, positionY);
                 Controls.Add(label);
-                label.Click += delegate 
+                label.Click += delegate
                 {
                     //wybierz z bazy lekarza o imieniu i nazwisku takim jak tresc labela
                     //przypisz jego dane do WybranyLekarz
@@ -77,7 +90,7 @@ namespace SzybkaWizyta
                 };
 
                 positionX += 243;
-                if(positionX > 900)
+                if (positionX > 900)
                 {
                     positionX = 190;
                     positionY += 50;
@@ -89,32 +102,35 @@ namespace SzybkaWizyta
         {
             Database databaseObj = new Database();
 
-
-            string zapytanieDostepny = "SELECT DISTINCT Specjalizacja AS Dostepnosc FROM Lekarz";
-            SQLiteCommand zapytanieD = new SQLiteCommand(zapytanieDostepny, databaseObj.myconn);
-            databaseObj.OpenConnection();
-
-            SQLiteDataReader wynikD = zapytanieD.ExecuteReader();
-            while (wynikD.Read())
-            {   
-                string test = wynikD["Dostepnosc"].ToString();
-                comboBox1.Items.Add(test);
+            using (SQLiteConnection c = new SQLiteConnection(databaseObj.myconn))
+            {
+                c.Open();
+                string sql = "SELECT DISTINCT Specjalizacja AS Dostepnosc FROM Lekarz";
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, c))
+                {
+                    using (SQLiteDataReader wynikD = cmd.ExecuteReader())
+                    {
+                        while (wynikD.Read())
+                        {
+                            string test = wynikD["Dostepnosc"].ToString();
+                            comboBox1.Items.Add(test);
+                        }
+                    }
+                }
             }
-            wynikD.Close();
+        }
 
-            //databaseObj.OpenConnection();
-            //string zapytanieSpec = "SELECT * FROM Lekarz";
-            //SQLiteCommand zapytanieA = new SQLiteCommand(zapytanieSpec, databaseObj.myconn);
-            //SQLiteDataReader wynikA = zapytanieA.ExecuteReader();
-            //if(wynikA.HasRows)
-            //{
-            //    wynikA.Read();
-            //    string test = wynikA["Specjalizacja"].ToString();
-            //    comboBox1.Items.Add(test);
-            //}
-            //wynikA.Close();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form4 f3 = new Form4();
+            f3.ShowDialog();
+        }
 
-            databaseObj.CloseConnection();
+        private void btnHomepage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
+

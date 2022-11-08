@@ -51,7 +51,7 @@ namespace SzybkaWizyta
                 isLekarz = true;
             }
 
-            databaseObj.CloseConnection();
+            
 
             if (userExists)
             {
@@ -87,6 +87,7 @@ namespace SzybkaWizyta
             }
             wynikU.Dispose();
             wynikL.Dispose();
+            databaseObj.CloseConnection();
         }
 
         private void labelRejestracja_Click(object sender, EventArgs e)

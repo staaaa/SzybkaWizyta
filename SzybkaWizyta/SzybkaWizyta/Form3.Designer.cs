@@ -170,6 +170,7 @@ namespace SzybkaWizyta
             this.btnHomepage.TabIndex = 9;
             this.btnHomepage.Text = "Strona Główna";
             this.btnHomepage.UseVisualStyleBackColor = false;
+            this.btnHomepage.Click += new System.EventHandler(this.btnHomepage_Click);
             // 
             // panel4
             // 
