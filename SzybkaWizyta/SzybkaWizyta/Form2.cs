@@ -71,6 +71,7 @@ namespace SzybkaWizyta
                 MessageBox.Show(ex.Message);
             }
             bool userCreated = true;
+            database.CloseConnection();
             if (userCreated)
             {
                 //Przypisanie danych do pacjenta w klasie
@@ -85,7 +86,7 @@ namespace SzybkaWizyta
                 Form3 f3 = new Form3();
                 f3.ShowDialog();
             }
-            database.CloseConnection();
+            
         }
 
         private void labelLogin_Click(object sender, EventArgs e)

@@ -51,6 +51,7 @@ namespace SzybkaWizyta
                 isLekarz = true;
             }
 
+            databaseObj.CloseConnection();
             
 
             if (userExists)
@@ -71,10 +72,14 @@ namespace SzybkaWizyta
                 Pacjent.data_urodzenia = dataUro;
                 Pacjent.email = email;
                 Pacjent.nrtelefonu = nrTel;
+                wynikU.Close();
+                wynikL.Close();
                 Hide();
                 Form3 f3 = new Form3();
                 f3.ShowDialog();
             }
+            wynikU.Close();
+            wynikL.Close();
             if (isLekarz)
             {
                 Hide();
@@ -85,9 +90,8 @@ namespace SzybkaWizyta
             {
                 labelNotExist.Text = "Konto o podanych danych nie istnieje.";
             }
-            wynikU.Dispose();
-            wynikL.Dispose();
-            databaseObj.CloseConnection();
+            
+            
         }
 
         private void labelRejestracja_Click(object sender, EventArgs e)

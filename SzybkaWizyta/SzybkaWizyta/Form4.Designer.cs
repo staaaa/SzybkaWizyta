@@ -112,7 +112,6 @@ namespace SzybkaWizyta
             this.godzinaPicker.Name = "godzinaPicker";
             this.godzinaPicker.Size = new System.Drawing.Size(222, 32);
             this.godzinaPicker.TabIndex = 11;
-            this.godzinaPicker.SelectedIndexChanged += new System.EventHandler(this.godzinaPicker_SelectedIndexChanged);
             // 
             // button1
             // 
