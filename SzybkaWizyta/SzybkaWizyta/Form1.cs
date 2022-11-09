@@ -78,20 +78,29 @@ namespace SzybkaWizyta
                 Form3 f3 = new Form3();
                 f3.ShowDialog();
             }
-            wynikU.Close();
-            wynikL.Close();
+            
             if (isLekarz)
             {
+                wynikL.Read();
+                string imie = wynikL["Imie"].ToString();
+                string nazwisko = wynikL["Nazwisko"].ToString();
+                WybranyLekarz.imie = imie;
+                WybranyLekarz.nazwisko = nazwisko;
+                wynikU.Close();
+                wynikL.Close();
                 Hide();
                 Form5 f5 = new Form5();
                 f5.ShowDialog();
             }
+            
             else
             {
                 labelNotExist.Text = "Konto o podanych danych nie istnieje.";
             }
-            
-            
+            wynikU.Close();
+            wynikL.Close();
+
+
         }
 
         private void labelRejestracja_Click(object sender, EventArgs e)

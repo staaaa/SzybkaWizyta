@@ -20,24 +20,13 @@ namespace SzybkaWizyta
         //EVENT PO WYBRANIU SPECJALIZACJI
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //TU UTWORZYSZ JAKAS LISTE Z TYMI WSZYSTKIMI LEKARZAMI.
-            //list lekarze
             List<string> lekarze = new List<string>();
-
-            //if (wynikA.HasRows)
-            //{
-            //    wynikA.Read();
-            //    string wybraneImie = wynikA["imie"].ToString();
-            //    string wybraneNazwisko = wynikA["nazwisko"].ToString();
-            //    string concat = wybraneImie + " " + wybraneNazwisko;
-            //    lekarze.Add(concat);
-            //}
             Database databaseObj = new Database();
-
+            string tescik = comboBox1.SelectedItem.ToString();
             using (SQLiteConnection c = new SQLiteConnection(databaseObj.myconn))
             {
                 c.Open();
-                string sql = "SELECT imie,nazwisko FROM Lekarz";
+                string sql = $"SELECT imie,nazwisko FROM Lekarz WHERE Specjalizacja = '{tescik}'";
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, c))
                 {
                     using (SQLiteDataReader wynikD = cmd.ExecuteReader())

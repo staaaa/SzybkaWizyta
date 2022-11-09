@@ -22,18 +22,43 @@ namespace SzybkaWizyta
             //TU UTWORZYSZ JAKAS LISTE ZE WSZYSTKIMI WIZYTAMI.
             //lista wizyt
             List<string> wizyty = new List<string>();
-            //wizyty.Add("10:00 - konrad wandtke");
-            //wizyty.Add("11:00 - kewin patelczyk");
-            //wizyty.Add("11:30 - laura szpicruta");
-            //wizyty.Add("12:00 - maciej boryna"); - Maciej Boryna i szpicruta w łeb
+            string data = dataWizyty.Value.ToString();
+            int pozycja = data.IndexOf(" ");
+            string concat1 = "";
+            for (int i = 0; i < pozycja; i++)
+            {
+                concat1 += data[i];
+            }
+            string data1 = concat1;
             Database database = new Database();
-            string zapytanieWizyty = "SELECT GodzinaWizyty, imie, nazwisko FROM Wizyty INNER JOIN Pacjent ON Pacjent.Id = Wizyty.IdWizyty";
+            string lekarz = "";
+            using (SQLiteConnection c = new SQLiteConnection(database.myconn))
+            {
+                c.Open();
+                string sql = $"SELECT id FROM Lekarz WHERE Imie = '{WybranyLekarz.imie}' AND Nazwisko = '{WybranyLekarz.nazwisko}'";
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, c))
+                {
+                    using (SQLiteDataReader wynikD = cmd.ExecuteReader())
+                    {
+                        while (wynikD.Read())
+                        {
+                            string wybraneImie = wynikD["id"].ToString();
+                            lekarz = wybraneImie;
+                        }
+                        wynikD.Close();
+                    }
+                }
+            }
+
+
+
+
+            string zapytanieWizyty = $"SELECT GodzinaWizyty, imie, nazwisko FROM Wizyty INNER JOIN Pacjent ON Pacjent.Pesel = Wizyty.IdPacjenta WHERE DataWizyty = '{data1}' AND IdLekarza = '{lekarz}'";
             SQLiteCommand zapytanieA = new SQLiteCommand(zapytanieWizyty, database.myconn);
             database.OpenConnection();
             SQLiteDataReader wynikW = zapytanieA.ExecuteReader();
             while(wynikW.Read())
             {
-                wynikW.Read();
                 string godzina = wynikW["GodzinaWizyty"].ToString();
                 string imie = wynikW["imie"].ToString();
                 string nazwisko = wynikW["nazwisko"].ToString();
@@ -44,7 +69,6 @@ namespace SzybkaWizyta
 
             database.CloseConnection();
 
-            //ta petla odpowiada za usuwanie starych labeli przy zmianie specjalizacji
             if (allLabels.Count != 0)
             {
                 for (int j = 0; j < allLabels.Count; j++)
